@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Teste Front-End!</title>
+        <!-- Carrega o CSS da página-->
+        <link rel="stylesheet" href="css/style.css"> 
+        <!-- Carrega biblioteca de ícones-->
+        <link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/all.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap" rel="stylesheet">
+    </head>
+    
+    <body>
+        
+        <!-- Primeira parte da navbar com um flexbox de 4 itens com ícones-->
+    <nav>
+        <!-- Inicia a primeira navbar-->
+           <section id="nav1" class="navbar">
+               <div class="nav1-item"><i class="fas nav1-icon fa-lock"></i><span class="nav1-text">COMPRA 100% SEGURA</span></div><hr class="nav1-hr">
+               <div class="nav1-item"><i class="fas nav1-icon fa-exchange-alt"></i><span class="nav1-text">1ª TROCA GRÁTIS</span></div><hr class="nav1-hr">
+               <div class="nav1-item"><i class="fas nav1-icon fa-percent"></i><span class="nav1-text">5X SEM JUROS</span></div><hr class="nav1-hr">
+               <div class="nav1-item"><i class="fas nav1-icon fa-truck"></i><span class="nav1-text">ENTREGAS EM TODO O BRASIL</span></div><hr class="nav1-hr">
+           </section>
+        <!-- Encerra a primeira navbar-->
+
+        <!-- Segunda parte da navbar com um flexbox de 4 itens com ícones-->
+           
+        <!-- Inicia a segunda navbar-->
+           <section id="nav2" class="navbar"> 
+                   <!-- Insere o LOGO-->
+                   <div class="nav2-item"><a href="#"><img src="images/NinjaSom.png"></a></div>
+                   <!-- Insere a barra de pesquisa -->
+                   <div class="nav2-item">
+                       <form id="search-form">
+                           <input id="search-bar" type="text" placeholder="Busque aqui..."><button id="search-button" type="submit"><i class="fas fa-search"></i></button>
+                       </form>
+                   </div>
+                   <!-- Insere contato telefônico-->
+                   <div class="nav2-item"><a href="#"><i id="whatsapp" class="fab nav2-icon fa-whatsapp"> (11) 99999-9999</i></a></div>
+                   <!-- Insere botão de minha conta-->
+                   <a id="account-button" href="#"><div><i id="account-icon" class="far nav2-icon fa-user"></i><p id="account-text-box"><span id="hello-guest">OLÁ, VISITANTE</span><br class="small-jump"><span id="my-account">MINHA CONTA</span></p></div></a>
+                   <!-- Insere div invisível para conseguir espaço suficiente para colocar o bloco do carrinho-->
+                   <div class="invisible nav2-item"></div>
+                   <!-- Insere botão do carrinho de compras-->
+                   <a href="#"><div id="cart" class="nav2-item"><div id="cart-interior"><i id="cart-icon"class="fas fa-shopping-bag"></i><span id="cart-text1"class="cart-text">SEU CARRINHO</span><br class="small-jump"><span id="cart-text2" class="cart-text">0 item (s)</span></a></div></div>
+                </section>
+        <!-- Encerra a segunda navbar-->
+
+        <!-- Inicia a terceira navbar-->
+        <section id="nav3" class="navbar"> 
+            <a href="#" class="nav3-item"><div ><span class="nav3-text">TODAS AS CATEGORIAS</span></div></a>
+            <a href="#" class="nav3-item"><div ><span class="nav3-text">SOM PROFISSIONAL</span></div></a>
+            <a href="#" class="nav3-item"><div ><span class="nav3-text">INSTRUMENTOS MUSICAIS</span></div></a>
+            <a href="#" class="nav3-item"><div ><span class="nav3-text">PROMOÇÕES</span></div></a>
+            <a href="#" class="nav3-item"><div ><span class="nav3-text">CONTATO</span></div></a>
+            <!-- Insere div invisível para conseguir espaço suficiente para colocar o bloco do carrinho-->
+            <div class="invisible nav3-item">TESTE</div>
+        </section>
+        <!-- Encerra a terceira navbar-->
+    </nav>
+
+        <!-- Inicia o banner-->
+        <section id="banner">
+            <button id="previous"> 
+                <svg xmlns="http://www.w3.org/2000/svg" color="white" width="50" height="50" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+                </svg> 
+            </button>
+            
+            <button id="next">
+                <svg xmlns="http://www.w3.org/2000/svg" color="white" width="50" height="50" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                </svg>
+            </button>
+            
+            <div id="banner-text">
+                    <div id="banner-text1"><span>NOVOS PRODUTOS</span><br class="small-jump"></div>
+                    <div id="banner-text2"><span><b>INSTRUMENTOS<b></span><br class="small-jump"></div>
+                    <div id="banner-text3"><span>PROFISSIONAIS</span><br class="small-jump"></div>
+                    <div id="banner-text4"><span>CONFIRA</span><br class="small-jump"></div><hr class="banner-hr">
+                
+            </div>
+        </section>
+        <!-- Encerra o banner-->
+
+        <!-- Inicia as categorias-->
+        <section id="categories">
+                <div class="categories-item"><img class="categories-img" src="images/Cat1.png"><span class="categories-text">GUITARRAS</span></div>
+                <div class="categories-item"><img class="categories-img" src="images/Cat2.png"><span class="categories-text">MICROFONES</span></div>
+                <div class="categories-item"><img class="categories-img" src="images/Cat3.png"><span class="categories-text">MESA DE SOM</span></div>
+                <div class="categories-item"><img class="categories-img" src="images/Cat4.png"><span class="categories-text">TECLADOS</span></div>
+                <div class="categories-item"><img class="categories-img" src="images/Cat5.png"><span class="categories-text">VIOLÃO</span></div>
+                <div class="categories-item"><img class="categories-img" src="images/Cat6.png"><span class="categories-text">BATERIAS</span></div>
+        </section>
+        <!-- Encerra as categorias-->     
+
+        <!-- Inicia as novidades-->
+        <section id="news">
+            <div class="audio">
+                <div class="double-text">
+                    <span class="double-text1">NOVIDADES</span>
+                    <hr class="double-hr">
+                    <span class="double-text2"><b>AUDIO</b></span>
+                    <span class="double-text3">PROFISSIONAL</span>
+                    <div class="clean-button1"><button type="button">CONFIRA</button></div>
+                </div>
+            </div>
+            <!-- Divide ao meio-->
+            <div class="bass">
+                <div class="double-text">
+                    <span class="double-text1">NOVIDADES</span>
+                    <hr class="double-hr">
+                    <span class="double-text2"><b>INSTRUMENTOS</b></span>
+                    <span class="double-text3">MUSICAIS</span>
+                    <div class="clean-button1"><button type="button">CONFIRA</button></div>
+                </div>
+            </div>
+        </section>
+        <!-- Encerra as novidades-->
+
+        <!-- Inicia os produtos-->
+        <section id="products">
+            <h1 id=products-title>INSTRUMENTOS <b>DESTAQUE</b></h1>
+            <p id="products-text" >it is a long established fact that a reader will be destracted by the readable</p>
+            <div class="products-block1"><script src="./js/products1.js"></script></div><br>
+            <div class="products-block2"><script src="./js/products2.js"></script></div>
+            <div class="clean-button2"><button type="button">VER MAIS</button></div>
+        </section>
+        <!-- Encerra os produtos-->
+
+        <!-- Inicia os anúncios-->
+        <section id="ads">
+            <span id="ads-title">AS <b>MELHORES</b> MARCAS</span>
+            <p id="ads-body">it is a long established fact that a reader will be destracted by the readable</p>
+            <div id="ads-images">
+                <img id="ads-img1" src="images/patrocinador1.png">
+                <img id="ads-img2" src="images/patrocinador2.png">
+                <img id="ads-img3" src="images/patrocinador3.png">
+                <img id="ads-img4" src="images/patrocinador4.png">
+            </div>
+        </section>
+        <!-- Encerra os anúncios-->
+
+        <!-- Inicia o "sobre nós"-->
+        <section id="about-us">
+            <span id="about-title">SOBRE NÓS</span>
+            <p id="about-body">It is a long established fact that a reader will be distracted by the readable content of a page when
+                looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal 
+                distribution of letters, as opposed to using ‘Content here, content here’, making it look like 
+                readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their 
+                default model text, and a search for ‘lorem ipsum’ will uncover many web sites still in their 
+                infancy. Lorem Ipsum as their default model text, and a search for ‘lorem ipsum’ will uncover many 
+                web sites still in their infancy. Lorem Ipsum as their default model text, and a search for ‘lorem 
+                ipsum’ will uncover many web sites still in their infancy. </p>
+        </section>
+        <!-- Encerra o "sobre nós"-->
+
+        <!-- Inicia o rodapé/footer-->
+        <section id="footer">
+            <div class="footer-content">
+                <h3>INTITUCIONAL<h3>
+                <p>QUEM SOMOS</p>
+                <p>NOSSAS LOJAS</p>
+                <h3>INTITUCIONAL<h3>
+                <p>QUEM SOMOS</p>
+                <p>NOSSAS LOJAS</p>
+            </div>
+            <div class="footer-content">
+                <h3>AJUDA E SUPORTE<h3>
+                <a href="#"><p>POLÍTICO DE PRIVACIDADE</p></a>
+                <a href="#"><p>POLÍTICO DE TROCAS</p></a>
+                <a href="#"><p>PRAZOS DE ENTREGA</p></a>
+                <a href="#"><p>TERMOS DE USO</p></a>
+            </div>
+            <div class="footer-content">
+                <div id="payment">
+                    <h3>AJUDA E SUPORTE</h3>
+                    <div class="image-block">
+                        <img class="" src="images/pagamento1.png" alt="Visa">
+                        <img class="" src="images/pagamento2.png" alt="MasterCard">
+                        <img class="" src="images/pagamento3.png" alt="American Express">
+                        <div>
+                            <img class="" src="images/pagamento4.png" alt="Diners Club">
+                            <img class="" src="images/pagamento5.png" alt="Boleto">
+                        </div>
+                    </div>
+                    <br>
+                    <h3>SEGURANÇA</h3>
+                    <div class="image-block">
+                        <img class="" src="images/rapid-ssl.png" alt="Rapid SSL">
+                        <img class="" src="images/vtex.png" alt="VTEX">
+                    </div>
+                </div>
+            </div>    
+        <div class="footer-content">
+            <div id="newsletter">
+                <p id="newsletter-text"> ASSINE NOSSO <b>NEWSLETTER</b> E RECEBA NOVIDADES E PROMOCÕES </p>
+                    <form id="newsletter-form">
+                    <input class="newsletter-field" type="text" placeholder="SEU NOME"><br>
+                    <input class="newsletter-field" type="text" placeholder="SEU E-MAIL"><br>
+                    <div class="clean-button2"><button type="button">ENVIAR</button></div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <!-- Encerra o rodapé/footer-->
+    </body>
+</html>

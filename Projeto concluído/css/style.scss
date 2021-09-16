@@ -1,0 +1,863 @@
+$primary-color: #041E50;
+$secondary-color: #FFFFFF;
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+
+* {
+    // Define a configuração inicial do documento
+    box-sizing: border-box;
+    overflow: visible;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+.invisible {
+    // Cria uma div invisível somente para criar o espaço necessário dentro da flexbox
+    content: '.';
+    visibility: hidden;
+}
+
+.small-jump {
+    // Define o tamanho do salto entre linhas de um "<br>"
+    display: block;
+    content: "";
+    margin-top: 0;
+}
+
+nav{
+    height:65px;
+}
+
+// Conteúdo da NAV1 ----------
+#nav1 {
+    // Tamanho e cor de fundo da primeira barra
+    background-color: $primary-color;
+    width: 100%;
+    height: 37px;
+    // Disposição dos itens da barra
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+    // Configuração visual da lista
+    list-style: none;
+
+    .nav1-icon {
+        // Define a disposição visual dos ícones da primeira parte da navbar
+        color: $secondary-color;
+        margin-right: 10px;
+    }
+
+    .nav1-item {
+        // Disposição interna dos itens
+        width: 25%;
+        height: 100%;
+        text-align: center;
+        padding-top: 8px;
+    }
+
+    .nav1-text {
+        // Configuração visual do texto
+        color: $secondary-color;
+        display:inline;
+        font-family: 'Lato', sans-serif;
+        font-size: small;
+        vertical-align: text-top;
+    }
+
+    .nav1-hr {
+        // Define tamanho das barras divisórias
+        height:50%;
+    }
+
+
+}
+
+// Conteúdo da NAV2 ----------
+#nav2 {
+    // Tamanho e cor de fundo da segunda barra
+    height: 75px;
+    background-color:$secondary-color;
+    // Disposição dos itens da barra
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 10%;
+
+    .nav2-item {
+        width: 25%;
+    }
+
+    .nav2-icon {
+        // Define a disposição visual dos ícones da segunda parte da navbar
+        color: $primary-color;
+        margin-right: 5px;
+    }
+
+    .nav2-item a {
+        // Configuração visual do texto
+        text-decoration: none;
+        color: $primary-color;
+    }
+
+    #search-form {
+        // Configuração e disposição do formulário
+        display:flex;
+        flex-direction:row;
+        /* This bit draws the box around it */
+        border:1px solid $primary-color;
+        border-radius: 5px;   
+
+            #search-bar:focus{
+                // Define a borda da barra de pesquisa como nula ao objeto entrar em foco para melhorar a "ilusão" dos objetos estarem juntos
+                outline: none;
+            }
+
+            #search-bar {
+                // Define tamanho e disposição da barra
+                width: 340px;
+                height: 41px;
+                padding: 5%;
+                // Configurações de fonte
+                font-family: 'Lato';
+                font-size: 90%;
+                // Oculta a borda para dar a ilusão de que é um único objeto e de que o botão de pesquisa está "dentro do input"
+                border: none;
+                // Define o radius para acompanha o item pai que no caso é o form assim conseguindo arredondar a borda
+                border-radius: inherit;
+            }
+        
+            #search-button {
+                width: 41px;
+                height: 41px;
+                background-color: rgba(29, 28, 28, 0);
+                // Oculta a borda para dar a ilusão de que é um único objeto e de que o botão de pesquisa está "dentro do input"
+                border: none;
+            }
+        }
+    
+    #whatsapp {
+        padding-left: 50px;
+    }
+    
+    #account-button {
+        // Define a disposição visual do bloco "minha conta"
+        text-decoration: none;
+        color: $primary-color;
+        display: block;
+        margin-bottom: 5px;
+        padding: 0 10px 0 30px;
+        position: relative;
+    }
+
+
+    #account-icon {
+        // Define a disposição visual do ícone "minha conta"
+        left: 5px;
+        margin-right: 5px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        vertical-align: middle;
+    }
+
+    #hello-guest {
+    display:flex;
+    flex-direction: wrap;
+
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 10px;
+    line-height: 100%;
+    letter-spacing: 0.09em;
+    }
+    
+    #my-account {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 7px;
+    line-height: 100%;
+    letter-spacing: 0.09em;
+    }
+    
+    #cart {
+        // Configura a disposição visual do bloco "meu carrinho"
+        position:absolute;
+        width: 77px;
+        height: 102px;
+        margin-left: 65%;
+        background-color: $primary-color;
+        display: flex;
+        text-align: center;
+        z-index: 1;
+    }
+    
+    #cart-icon {
+        // Configura a disposição visual do ícone "meu carrinho"
+        margin-top: 19px;
+        padding-left: 25%;
+        padding-bottom: 11.65px;
+        display:block;
+        color: $secondary-color;
+    }
+
+    .cart-text {
+        // Configura o texto do bloco "meu carrinho"
+        padding-left: 25%;
+        // Configura a fonte do texto
+        text-align: center;
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: bold;
+        // Configura cor e disposição do texto
+        display:block;
+        color: $secondary-color;
+    }
+
+    #cart-text1 {
+        // Configura o primeiro texto do bloco "meu carrinho"
+        padding-bottom: 7px;
+        // Configura a fonte do texto
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: bold;
+        font-size: 7px;
+        line-height: 100%;
+        letter-spacing: 0.09em;
+    }
+
+    #cart-text2 {
+        // Configura o segundo texto do bloco "meu carrinho"
+        font-family: 'Lato';
+        // Configura a fonte do texto
+        font-style: normal;
+        font-weight: bold;
+        font-size: 10px;
+        line-height: 100%;  
+        letter-spacing: 0.09em;
+    }
+}
+
+//Conteúdo da NAV3 ----------
+#nav3 {
+     // Define a disposição visual da nav3
+     height: 62px;
+     padding: 0 10%;
+     background-color:$secondary-color;
+     display:flex;
+     justify-content: space-around;
+     align-items: center;
+
+
+     .nav3-item {
+        // Configura a decoração o texto do bloco "nav3"
+        color: $primary-color;
+        text-decoration: none;
+        // Disposição dos itens de dentro da barra
+        height: 62px;
+        padding-top: 20px;
+
+     }
+
+     .nav3-text {
+        // Configura a fonte do texto
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: bold;
+        font-size: 10px;
+        line-height: 100%;
+        letter-spacing: 0.09em;
+     }
+}
+
+#banner {
+    // Define a disposição visual do banner
+    display: flex;
+    margin-top: 109px;
+    height:504px;
+    width: 100%;
+    background-image: url('../images/banner.png');
+    background-size: cover;
+}
+
+#banner-text {
+    display: block;
+    margin-top: 120px;
+    margin-left: 4%;
+    justify-content:center;
+    padding: 0 10%;
+}
+
+#banner-text1 {
+    // Define a disposição visual do banner-text1
+    text-align: center;
+    color: $secondary-color;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0.4em;
+    margin-bottom: 20px;
+}
+
+#banner-text2 {
+    // Define a disposição visual do banner-text2
+    text-align: center;
+    margin-bottom: 13px;
+    color: $secondary-color;
+    width: 414px;
+    height: 47px;
+    left: 166px;
+    top: 320px;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 47px;
+    line-height: 100%;
+    letter-spacing: 0.09em;
+}
+
+#banner-text3 {
+    // Define a disposição visual do banner-text3
+    text-align: center;
+    margin-bottom: 46px;
+    color: $secondary-color;
+    width: 403px;
+    height: 47px;
+    left: 165px;
+    top: 380px;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 47px;
+    line-height: 100%;
+    letter-spacing: 0.12em;
+}
+
+#banner-text4 {
+    // Define a disposição visual do banner-text4
+    text-align: center;
+    margin-bottom: 10px;
+    color: $secondary-color;
+    width: 111px;
+    height: 31px;
+    padding-left: calc(50% - 55.5px);
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0.4em;
+}
+
+.banner-hr {
+    // Define a disposição visual do banner-hr
+    margin-left: calc(50% - 55.5px);
+    width: 111px;
+    left: 305px;
+    top: 502px;
+}
+
+#previous, #next{
+    // Define a disposição visual das setas direita e esqueda do banner
+    position: absolute;
+    margin-top: 200px;
+    background: transparent;
+    border: none;
+}
+
+#previous{
+    // Define a disposição visual da seta previous
+    margin-left: 20px;
+}
+
+#next {
+    // Define a disposição visual da seta next
+    margin-right: 20px;
+    right:0px;
+}
+
+#categories {
+    // Define a disposição visual das categorias
+    display: flex;
+    justify-content: space-around;
+    padding: 0 10%;
+    text-align: center;
+    height:190px;
+
+    .categories-item {
+        // Define a disposição visual dos itens dentro de categorias
+        display:block;
+        padding-top: 2.5%;
+        text-align: center;
+
+        width: 16%;
+        height: 100%;
+        padding-left: 5%;
+        padding-right: 5%;
+    }  
+}
+
+#news {
+    // Define a disposição visual da parte de novidades
+    display: flex;
+    object-fit: fill;
+    justify-content: space-between;
+}
+
+.audio {
+    // Define a disposição visual do banner de audio
+    width: 100%;
+    height: 386px;
+    background-image: url('../images/mulher-fone.png');
+    background-size: cover;
+}
+
+
+.double-text {
+    // Define a disposição visual do texto do banner de audio
+    display: flex;
+    flex-direction:column;
+    text-align: center;
+    width: 100%;
+    height:100%;
+    padding-top: 116px;
+    background: linear-gradient(180deg, rgba(77, 77, 77, 0) 6.66%, rgba(39, 39, 39, 0.7) 63.18%);
+}
+
+.double-text1 {
+    // Define a disposição visual do audio-text1
+    margin-bottom: 11px;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 100%;
+    letter-spacing: 0.4em;
+    color:$secondary-color;
+}
+
+.double-hr {
+    // Define a disposição visual do audio-hr
+    margin-left: calc(50% - 9px);
+    margin-bottom: 18px;
+    width: 18px;
+    height: 1px;
+    border-radius: 5px;
+}
+
+.double-text2 {
+    // Define a disposição visual do audio-text2
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 41px;
+    line-height: 100%; 
+    letter-spacing: 0.09em;
+    color: $secondary-color;
+    margin-bottom: 7px;
+}
+
+.double-text3 {
+    // Define a disposição visual do audio-text3
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 40px;
+    line-height: 100%;
+    letter-spacing: 0.12em;
+    color: $secondary-color;
+}
+
+.double-text4 {
+    // Define a disposição visual do audio-text4
+    margin-bottom: 4%;
+}
+
+.bass {
+    // Define a disposição visual do banner do baixo
+    width: 100%;
+    height: 386px;
+    background-image: url('../images/homem-baixo.png');
+    background-size: cover;
+}
+
+
+#products {
+    // Define a disposição visual do bloco de produtos
+display: block;
+padding: 0 10%;
+padding-top: 60px;
+}
+
+#products-title {
+    // Define a disposição visual do título dos produtos
+
+    text-align: center;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 23px;
+    line-height: 100%;
+    letter-spacing: 0.1em;
+    color:$primary-color;
+}
+
+#products-text {
+    // Define a disposição visual do título dos produtos
+    padding-top: 21px;
+    padding-bottom: 85px;
+    text-align: center;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 100%;
+    letter-spacing: 0.1em;
+}
+
+.products-block1{
+    // Define a disposição visual do primeiro bloco de produtos
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+}
+
+.products-block2{
+    // Define a disposição visual do segundo bloco de produtos
+    margin-top: 60px;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+}
+
+.name-prod{
+    // Define a disposição visual do texto "nome" dos produtos
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+    align-items: center;
+}
+
+.descri-prod{
+    // Define a disposição visual do texto "descrição" dos produtos
+    font-weight: 300;
+    font-size: 10px;
+    text-align: center;
+    align-items: center;
+}
+
+.price-prod{
+    // Define a disposição visual do texto "preço" dos produtos
+    font-weight: 700;
+    font-size: 18px;
+    text-align: center;
+    align-items: center;
+}
+
+.photo-prod{
+    // Define a disposição visual da imagem do produto
+    text-align: center;
+    align-items: center;
+}
+
+.clean-button1 {
+    // Define a disposição visual do botão de fundo transparente de cor branca
+    text-align: center;
+    display:flex;
+    justify-content: space-between;
+    width: 154px;
+    height: 52px;
+    margin-top: 29px;
+    margin-left: calc(50% - 77px);
+    background-color: transparent;
+    border-radius: 5px;
+    border: 1px solid $secondary-color;
+}
+
+.clean-button1 button{
+    // Define a disposição visual do botão de fundo transparente de cor branca
+    text-align: center;
+    width: 100%;
+    height:100%;
+    color: $secondary-color;
+    background-color: transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+}
+
+
+.clean-button2 {
+    // Define a disposição visual do botão de fundo transparente de cor azul
+    text-align: center;
+    display:flex;
+    justify-content: space-between;
+    width: 154px;
+    height: 52px;
+    margin-top: 70px;
+    margin-left: calc(50% - 77px);
+    background-color: transparent;
+    border-radius: 5px;
+    border: 1px solid $primary-color;
+}
+
+.clean-button2 button{
+    // Define a disposição visual do botão de fundo transparente de cor azul
+    text-align: center;
+    width: 100%;
+    height:100%;
+    color: $primary-color;
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+}
+
+#ads {
+    // Define a disposição visual do bloco de anúncios
+    width: 100%;
+    height: 200px;
+
+    #ads-title {
+        // Define a disposição visual dos títulos anúncios
+        text-align: center;
+        display: block;
+        font-family: 'Lato';
+        font-weight: 500;
+        font-size: 25px;
+        color: #1a3f83;
+        letter-spacing: 2px;
+        margin-top: 106px;
+    }
+
+    #ads-body {
+        // Define a disposição visual do corpo dos anúncios
+        text-align: center;
+        font-size: 15px;
+        color: #A5A5A5;
+        letter-spacing: 1px;
+        margin-top: 19px;
+    }
+
+    #ads-images {
+        // Define a disposição visual das imagens dos anúncios
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+
+        margin: 0px auto;
+        margin-top: 100px;
+        width: 90%;
+    }
+
+    #ads-img1 {
+        // Define a disposição visual da ads-img1
+        width: 133px; 
+        height: 52px; 
+    }
+
+    #ads-img2 {
+        // Define a disposição visual da ads-img2
+        width: 211px; 
+        height: 33px;
+    }
+
+    #ads-img3 {
+        // Define a disposição visual da ads-img3
+        width: 202px; 
+        height: 34px;
+    }
+
+    #ads-img4 {
+        // Define a disposição visual da ads-img4
+        width: 223px; 
+        height: 40px;
+    }
+}
+
+#about-us {
+    // Define a disposição visual do bloco "sobre nós"
+    display: block;
+    text-align: center;
+    height: 390px;
+    width: 100%;
+    padding-top: 131px;
+
+    #about-title {
+        // Define a disposição visual do título do "sobre nós"
+        width: 146px;
+        height: 31px;
+        font-family: Lato;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 26px;
+        line-height: 31px;
+        color:$primary-color;
+    }
+
+    #about-body {
+        // Define a disposição visual do corpo do "sobre nós"
+        margin-left: calc(50% - 450.5px);
+        margin-top: 33px;
+        width: 901px;
+        height: 140px;
+    }
+}
+
+#presentation {
+    // Define a disposição visual do bloco de apresentação
+    display: flex;
+    background: $secondary-color;
+    padding: 10px;
+    height: 175px;
+    border-radius: 5px;
+    box-shadow:rgba(0, 0, 0, 0.25);
+    border-bottom: -20px;
+}
+
+#footer {
+    // Define a disposição visual do bloco de rodapé
+    display:flex;
+    padding: 0 10%;
+    background-color: $primary-color;
+    width: 100%;
+    left: 379px;
+    top: 3138px;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.footer-content {
+    margin-top: 108px;
+    margin-right: 5%;
+    margin-bottom: 89px;
+    
+}
+
+#footer h3 {
+    // Define a disposição visual dos H3 contidos no rodapé
+    color: $secondary-color;
+}
+
+#footer p{
+    // Define a disposição visual dos textos nos "p's" contidos no rodapé
+    margin-top: 20px;
+    margin-right: 20px;
+    width: 171px;
+    height: 42px;
+    left: 379px;
+    top: 3175px;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+}
+
+#footer a {
+    // Define a disposição visual dos "a's" do rodapé
+    text-decoration: none;
+    color: $secondary-color;
+}
+
+#payment {
+    // Define a disposição visual do bloco das formas de pagamento
+    display: block;
+}
+
+#image-block {
+    // Define a disposição do bloco de imagens das formas de de pagamento
+    margin-top: 20px;
+}
+
+#newsletter {
+    // Define a disposição visual do bloco de newsletter
+    display:block;
+    text-align: center;
+    width: 276px;
+    height: 249px;
+    margin-left: 89px;
+    background-color: $secondary-color;
+    border-radius: 5px;
+}
+
+#newsletter-text {
+    // Define a disposição visual do texto do newsletter
+    width: 217px;
+    height: 31px;
+    margin-left: 20%;
+    margin-bottom: 25px;
+    padding-top: 25px;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: $primary-color;
+}
+
+#newsletter-form {
+    // Define a disposição visual do formulário do newsletter
+    padding-top: 20px;
+    
+}
+
+.newsletter-field {
+    // Define a disposição visual dos campos do formulário do newsletter
+    margin-top: 10px;
+    border-top:none;
+    border-left:none;
+    border-right:none;
+    height: 44px;
+    width: 214px;
+    color: $primary-color;
+}
+
+.newsletter-field::placeholder {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+    color: $primary-color;
+}
+
+#newsletter .clean-button2 {
+    margin-top: 10px;
+    margin-left: 32%;
+    width: 111px;
+    height: 35px;
+
+}
+
+@media (max-width: 1200px){
+  // Adiciona responsividade no interior das categorias
+  .categories{
+      height:50px;
+      padding-top: 50%;
+      width: 100%;
+  }
+  .categories-item{
+      width: 16%;
+  }
+  .categories-item img{
+      padding-top: 50%;
+      width: 100%;
+  }
+}
